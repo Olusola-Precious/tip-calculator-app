@@ -21,7 +21,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: hsl(172, 67%, 45%);
+    background: hsl(185, 41%, 84%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,8 @@ body {
     /* border: 2px solid green; */
     width: max-content;
     margin: 39px auto;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 8px;
     color: hsl(183, 100%, 15%);
@@ -66,6 +67,7 @@ body {
 
 .mycard .left h2 {
     font-size: 12px;
+    font-weight: 700;
 }
 
 .mycard .left input {
@@ -74,8 +76,9 @@ body {
     background: hsl(189, 41%, 97%);
     padding: 5px;
     border: none;
-    font-weight: 500;
+    font-weight: 700;
     outline: none;
+    color: hsl(183, 100%, 15%);
     /* font-size: 24px; */
 }
 
@@ -84,11 +87,11 @@ body {
     box-sizing: border-box;
     padding: 0px 12px;
     background: hsl(189, 41%, 97%);
-    color: hsl(185, 41%, 84%);
     width: fit-content;
     height: 100%;
     font-weight: 200;
     font-size: 18px;
+    color: hsl(184, 14%, 56%);
 }
 
 .mycard .left .bill .bill-input:hover,
@@ -150,10 +153,13 @@ body {
     margin-bottom: 20px;
 }
 
+.mycard .right button.active,
 .mycard .right button:hover,
 .left .tip button:hover,
 .mycard .tip button.clicked {
     background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
 }
 
 .left .tip input.custom {
@@ -173,7 +179,7 @@ body {
 
 .left .tip input.custom::placeholder {
     color: hsla(183, 100%, 15%, 0.753);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .mycard .right {
@@ -221,11 +227,21 @@ body {
     font-weight: 700;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 @media (max-width:768px) {
     body {
         width: 100%;
         height: 100%;
-        justify-content: center;
+        /* justify-content: center; */
     }
     .content {
         /* display: block; */
@@ -235,7 +251,7 @@ body {
     .mycard {
         width: 330px;
         padding: 15px !important;
-        margin: 0;
+        margin: 10px;
     }
     .mycard .left {
         padding: 10px 0px;

@@ -63,6 +63,7 @@ function calculateTip() {
 
     document.querySelector("#tip-amt").innerHTML = tip;
     document.querySelector("#total-amt").innerHTML = total;
+    document.getElementById("reset").classList.add("active")
 
 }
 
@@ -75,6 +76,7 @@ function reset() {
 
     document.querySelector("#tip-amt").innerHTML = "0.00";
     document.querySelector("#total-amt").innerHTML = "0.00";
+    document.getElementById("reset").classList.remove("active")
 }
 
 // Check Event on bill input
