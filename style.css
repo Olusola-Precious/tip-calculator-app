@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+:root {
+    -strong-cyan: hsl(172, 67%, 45%);
+    -very-dark-cyan: hsl(183, 100%, 15%);
+    -dark-grayish-cyan: hsl(186, 14%, 43%);
+    -grayish-cyan: hsl(184, 14%, 56%);
+    -light-grayish-cyan: hsl(185, 41%, 84%);
+    -lighter-grayish-cyan: hsl(189, 41%, 97%);
+    -white: hsl(0, 0%, 100%);
+}
+
+
+/* 
+---------------
+    Desktop View
+---------------
+*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: hsl(172, 67%, 45%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: 'Space Mono', sans-serif; */
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    /* font-size: 15px; */
+}
+
+.content {
+    /* display: block; */
+    margin: 70px auto;
+    color: hsl(185, 41%, 84%);
+}
+
+.header {
+    /* text-align: center; */
+    /* border: 2px solid green; */
+    width: max-content;
+    margin: 39px auto;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: hsl(183, 100%, 15%);
+}
+
+.mycard {
+    /* position: relative; */
+    background: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    margin: 10px;
+    height: fit-content !important;
+    padding: 20px 20px 10px 20px;
+    width: 680px;
+}
+
+.mycard .left {
+    padding: 10px 10px 0px 10px;
+    margin: 10px 10px 0 0;
+    color: hsl(186, 14%, 43%);
+}
+
+.mycard .left h2 {
+    font-size: 12px;
+}
+
+.mycard .left input {
+    height: 100%;
+    text-align: end;
+    background: hsl(189, 41%, 97%);
+    padding: 5px;
+    border: none;
+    font-weight: 500;
+    outline: none;
+    /* font-size: 24px; */
+}
+
+.mycard .left .bill .bill-input,
+.mycard .left .people-input {
+    box-sizing: border-box;
+    padding: 0px 12px;
+    background: hsl(189, 41%, 97%);
+    color: hsl(185, 41%, 84%);
+    width: fit-content;
+    height: 100%;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.mycard .left .bill .bill-input:hover,
+.mycard .left .people-input:hover,
+.mycard .left .bill .bill-input.focus,
+.mycard .left .people-input.focus {
+    border: 1px solid hsl(172, 67%, 45%);
+    border-radius: 5px;
+}
+
+.mycard .left .people-input.focus-err {
+    border: 2px solid hsl(16, 55%, 60%);
+    border-radius: 5px;
+}
+
+.people .err {
+    color: hsl(16, 55%, 60%);
+}
+
+.people-input input::placeholder,
+.bill-input input::placeholder {
+    color: hsl(185, 41%, 84%);
+}
+
+.people-input b,
+.bill-input b {
+    margin-right: 15px;
+}
+
+.left .tip {
+    margin: 25px 5px 10px 5px;
+}
+
+.left .tip .btns div {
+    margin-bottom: 8px;
+    margin-left: -2px;
+}
+
+.left .tip button {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border: 1px;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+}
+
+.people {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.mycard .right button:hover,
+.left .tip button:hover,
+.mycard .tip button.clicked {
+    background-color: hsl(172, 67%, 45%);
+}
+
+.left .tip input.custom {
+    height: 100%;
+    width: 100%;
+    padding: 3px 6px;
+    border: none;
+    background: hsl(189, 41%, 97%);
+    border-radius: 5px;
+}
+
+.left .tip input.custom:hover,
+.left .tip input.custom:focus {
+    border: 1px solid hsl(172, 67%, 45%);
+    border-radius: 5px;
+}
+
+.left .tip input.custom::placeholder {
+    color: hsla(183, 100%, 15%, 0.753);
+    font-weight: 500;
+}
+
+.mycard .right {
+    background: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    width: 300px;
+    height: fit-content;
+    padding: 33px 10px;
+}
+
+.mycard .right .tip {
+    margin: 10px 5px;
+    padding: 5px;
+}
+
+.mycard .right .tip .label h4 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.mycard .right .tip .label p {
+    font-size: 13px;
+    font-weight: 500;
+    color: hsl(186, 14%, 43%);
+}
+
+.mycard .right .tip .figure {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: -7px;
+    color: hsl(172, 67%, 45%);
+}
+
+.mycard .right button {
+    margin: 35px 0 0 25px;
+    width: 80%;
+    border: 1px;
+    border-radius: 5px;
+    padding: 8px;
+    text-transform: uppercase;
+    background: hsla(172, 67%, 45%, 0.185);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+@media (max-width:768px) {
+    body {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    .content {
+        /* display: block; */
+        margin: 10px;
+        color: hsl(185, 41%, 84%);
+    }
+    .mycard {
+        width: 330px;
+        padding: 15px !important;
+        margin: 0;
+    }
+    .mycard .left {
+        padding: 10px 0px;
+        margin: 10px;
+        /* color: hsl(186, 14%, 43%); */
+    }
+    .left .tip {
+        margin-top: 35px;
+        /* margin-left: 9px; */
+        /* margin-right: -20px; */
+        /* padding: 15px 10px 5px 10px; */
+    }
+    .left .tip button {
+        padding: 5px 2px;
+    }
+    .left .tip .btns div {
+        margin-left: -9px;
+        margin-right: -15px;
+    }
+    .left .tip button {
+        width: 90%;
+        padding: 10px;
+    }
+}
