@@ -99,9 +99,17 @@ body {
     border-radius: 5px;
 }
 
-.mycard .left .people-input.focus-err {
+.mycard .left .focus-err .people-input {
     border: 2px solid hsl(16, 55%, 60%);
     border-radius: 5px;
+}
+
+.mycard .left .people .err-msg {
+    display: none;
+}
+
+.mycard .left .people.focus-err .err-msg {
+    display: block;
 }
 
 .people .err {
@@ -194,6 +202,7 @@ body {
 
 .mycard .right .tip .figure {
     width: 100%;
+    text-align: end;
     font-size: 28px;
     font-weight: 500;
     margin-top: -7px;

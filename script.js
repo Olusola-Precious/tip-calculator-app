@@ -17,6 +17,10 @@ var btns = document.querySelector(".btns").getElementsByTagName("button");
 
 function round(num, places) {
     num = parseFloat(num);
+    // console.log(num);
+    if (!num) {
+        return 0.00
+    }
     places = (places ? parseInt(places, 10) : 0)
     if (places > 0) {
         let length = places;
@@ -28,9 +32,56 @@ function round(num, places) {
     } else {
         places = 1;
     }
-    return Math.round((num + Number.EPSILON) * (1 * places)) / (1 * places)
+    var res = Math.round((num + Number.EPSILON) * (1 * places)) / (1 * places)
+    return res === Infinity ? 0.00 : res;
 }
 
+const getVal = (value) => {
+    return value === '' ? 0 : value
+}
+
+
+function calculateTip() {
+
+
+    cost = getVal(document.querySelector("#bill").value);
+    percentage = getVal(percentage);
+
+
+    people = getVal(document.querySelector("#people").value);
+    //console.log(cost);
+
+
+    if (!useRequire("#people")) {
+        // console.log("Resturns");
+        return
+    }
+
+    // console.log("No Resturns");
+    tip = round((percentage * cost) / people, 2);
+    total = round(((1 + percentage) * cost) / people, 2);
+
+    document.querySelector("#tip-amt").innerHTML = tip;
+    document.querySelector("#total-amt").innerHTML = total;
+
+}
+
+
+function reset() {
+    var inputs = document.getElementsByTagName('input');
+    [...inputs].forEach(elem => {
+        elem.value = '';
+    })
+
+    document.querySelector("#tip-amt").innerHTML = "0.00";
+    document.querySelector("#total-amt").innerHTML = "0.00";
+}
+
+// Check Event on bill input
+document.getElementById("bill").addEventListener('blur', calculateTip);
+
+
+// Check Event on buttons
 Array.prototype.forEach.call(btns, item => {
     // console.log(item.innerHtml);
     item.addEventListener('click', function() {
@@ -44,22 +95,49 @@ Array.prototype.forEach.call(btns, item => {
         this.classList.add("clicked");
 
         //console.log(round(tip, 2), round(total, 2));
-        percentage = eval(this.innerHTML.trim().replace('%', '/100'))
-            // console.log(percentage);
+        var getpercentage = eval(this.innerHTML.trim().replace('%', '/100'));
+        percentage = getpercentage === undefined ? 0 : getpercentage;
+        // console.log(percentage)
+        calculateTip();
+        // console.log(percentage);
     })
 })
 
+// Check Event on people input
+
+function useRequire(selector) {
+    let peeps = document.querySelector(selector);
 
 
-function calculateTip() {
-    cost = document.querySelector("#bill").value;
-    people = document.querySelector("#people").value;
-    //console.log(cost);
+    //var val = peeps.value === '' ? null : peeps.value;
+    // console.log(val);
+    // console.log(this.parentElement.parentElement.parentElement.classList)
+    if (peeps.value === '') {
+        // console.log(val);
+        peeps.parentElement.parentElement.parentElement.classList.add("focus-err");
+        return false;
 
 
-    tip = round((percentage * cost) / people, 2);
-    total = round(((1 + percentage) * cost) / people, 2);
-
-    document.querySelector("#tip-amt").innerHTML = tip;
-    document.querySelector("#total-amt").innerHTML = total;
+    } else {
+        // console.log(val);
+        peeps.parentElement.parentElement.parentElement.classList.remove("focus-err");
+        // people = peeps.value;
+        return true;
+    }
 }
+
+
+const peeps = document.querySelector("#people");
+//console.log(peeps)
+peeps.addEventListener('blur', function() {
+    // var res = useRequire("#people");
+    // if (res) {
+    //     calculateTip();
+    // }
+
+
+    calculateTip();
+})
+
+
+document.getElementById("reset").addEventListener('click', reset)
