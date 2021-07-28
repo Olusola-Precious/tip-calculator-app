@@ -53,5 +53,3 @@ Mobile View.
 - Name - Code.Pray.Code
 - Frontend Mentor - [@Olusola-Precious](https://www.frontendmentor.io/profile/Olusola-Precious])
 - Twitter - [@codepraycode](https://www.twitter.com/codepraycode)
-
-
