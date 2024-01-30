@@ -16,13 +16,19 @@ var people = 0;
 function validateInput(inputElement) {
     var inputValue = inputElement.value;
 
-    // Use the pattern property to check if the input matches the regex pattern
-    if (!inputElement.checkValidity()) {
+    const lastCharInt = parseInt(str.charAt(str.length - 1));
 
-        // console.log("Valid input: " + inputValue);
-        // Add your logic for valid input here
+    if (isNaN(lastCharInt)) {
         inputElement.value = inputValue.slice(0, -1);
-    } 
+    }
+
+    // // Use the pattern property to check if the input matches the regex pattern
+    // if (!inputElement.checkValidity()) {
+
+    //     // console.log("Valid input: " + inputValue);
+    //     // Add your logic for valid input here
+        
+    // } 
     
     // else {
     //     // console.log("Invalid input: " + inputValue);
