@@ -32,7 +32,7 @@
                     <div class="bill-input">
                         <span>
                         <b>&dollar;</b>
-                        <input type="text" id="bill" placeholder="0" pattern="^\d+$"/>
+                        <input type="text" id="bill" placeholder="0" pattern="^\d+$" onchange="validateInput(this)"/>
                         </span>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="col-6 col-md-4">
-                            <input class="custom" placeholder="Custom" pattern="^\d+$"/>
+                            <input class="custom" placeholder="Custom" pattern="^\d+$" onchange="validateInput(this)"/>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                     <div class="people-input ">
                         <span>
                         <b><i class="fas fa-user    "></i></b>
-                        <input type="text" id="people"placeholder="0" pattern="^\d+$"/>
+                        <input type="text" id="people"placeholder="0" pattern="^\d+$" onchange="validateInput(this)"/>
                       </span>
                     </div>
                 </div>

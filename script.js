@@ -13,6 +13,22 @@ var cost = 0;
 var people = 0;
 
 
+function validateInput(inputElement) {
+    var inputValue = inputElement.value;
+
+    // Use the pattern property to check if the input matches the regex pattern
+    inputElement.checkValidity()
+    // if () {
+
+    //     console.log("Valid input: " + inputValue);
+    //     // Add your logic for valid input here
+    // } else {
+    //     console.log("Invalid input: " + inputValue);
+    //     // Add your logic for invalid input here
+    // }
+}
+
+
 var btns = document.querySelector(".btns").getElementsByTagName("button");
 
 function round(num, places) {
