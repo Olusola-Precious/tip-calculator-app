@@ -17,13 +17,15 @@ function validateInput(inputElement) {
     var inputValue = inputElement.value;
 
     // Use the pattern property to check if the input matches the regex pattern
-    inputElement.checkValidity()
-    // if () {
+    if (!inputElement.checkValidity()) {
 
-    //     console.log("Valid input: " + inputValue);
-    //     // Add your logic for valid input here
-    // } else {
-    //     console.log("Invalid input: " + inputValue);
+        // console.log("Valid input: " + inputValue);
+        // Add your logic for valid input here
+        inputElement.value = inputValue.slice(0, -1);
+    } 
+    
+    // else {
+    //     // console.log("Invalid input: " + inputValue);
     //     // Add your logic for invalid input here
     // }
 }
