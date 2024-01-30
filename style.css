@@ -75,7 +75,8 @@ body {
     text-align: end;
     background: hsl(189, 41%, 97%);
     padding: 5px;
-    border: none;
+    border: 0;
+    border-radius: 5px;
     font-weight: 700;
     outline: none;
     color: hsl(183, 100%, 15%);
@@ -98,13 +99,13 @@ body {
 .mycard .left .people-input:hover,
 .mycard .left .bill .bill-input.focus,
 .mycard .left .people-input.focus {
-    border: 1px solid hsl(172, 67%, 45%);
-    border-radius: 5px;
+    outline: 1px solid hsl(172, 67%, 45%);
+    
 }
 
 .mycard .left .focus-err .people-input {
-    border: 2px solid hsl(16, 55%, 60%);
-    border-radius: 5px;
+    outline: 2px solid hsl(16, 55%, 60%);
+    /* border-radius: 5px; */
 }
 
 .mycard .left .people .err-msg {
@@ -166,15 +167,16 @@ body {
     height: 100%;
     width: 100%;
     padding: 3px 6px;
-    border: none;
+    border: 0;
+    border-radius: 5px;
     background: hsl(189, 41%, 97%);
     border-radius: 5px;
 }
 
 .left .tip input.custom:hover,
 .left .tip input.custom:focus {
-    border: 1px solid hsl(172, 67%, 45%);
-    border-radius: 5px;
+    outline: 1px solid hsl(172, 67%, 45%);
+    
 }
 
 .left .tip input.custom::placeholder {
